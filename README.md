@@ -1,1 +1,1 @@
-# testing
+JavaScript unit test using Jest
