@@ -5,7 +5,7 @@
 // 4. If character is upperCase 
 // 4. Join the new string.
 
-function cesarCipher(string, code) {
+function caesarCipher(string, code) {
     const cipheredString = [];
     const regex = /[a-zA-Z]/;
 
@@ -20,7 +20,7 @@ function cesarCipher(string, code) {
             const isUpperCase = char === char.toUpperCase(); 
             const base = isUpperCase ? 'A'.charCodeAt(0) : 'a'.charCodeAt(0);
             const charCode = char.charCodeAt(0);
-            let newIndex = (charCode - base + code);
+            let newIndex = (charCode - base + code) % 26;
             if (newIndex < 0) {
                 newIndex += 26;
             }
@@ -31,3 +31,5 @@ function cesarCipher(string, code) {
     }
     return cipheredString.join('');
 }
+
+module.exports = caesarCipher;
