@@ -1,7 +1,7 @@
 const capitalize = require('./capitalize');
 
 test ('should exits', () => {
-    expect(capitalize()).toBeDefined();
+    expect(capitalize('string')).toBeDefined();
 });
 
 test ('testing should return Testing', () => {
